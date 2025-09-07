@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with rounded rectangle and teal gradient -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#26A69A"/>
+      <stop offset="100%" stop-color="#00897B"/>
+    </linearGradient>
+
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+
+    <!-- Simple QR module (square) symbol -->
+    <g id="qrModule">
+      <rect x="0" y="0" width="16" height="16" rx="2" fill="#FFFFFF"/>
+    </g>
+
+    <!-- Finder pattern (3 nested squares) -->
+    <g id="finder">
+      <rect x="0" y="0" width="96" height="96" rx="12" fill="#FFFFFF"/>
+      <rect x="12" y="12" width="72" height="72" rx="8" fill="url(#finderGrad)"/>
+      <rect x="28" y="28" width="40" height="40" rx="6" fill="#FFFFFF"/>
+    </g>
+
+    <linearGradient id="finderGrad" x1="0" y1="0" x2="96" y2="96" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#E0F2F1"/>
+      <stop offset="100%" stop-color="#B2DFDB"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer rounded background -->
+  <rect x="32" y="32" width="448" height="448" rx="96" fill="url(#bgGrad)"/>
+
+  <!-- Decorative subtle grid on background -->
+  <g opacity="0.08">
+    <!-- vertical lines -->
+    <path d="M96 48 V464 M160 48 V464 M224 48 V464 M288 48 V464 M352 48 V464 M416 48 V464"
+          stroke="#FFFFFF" stroke-width="2"/>
+    <!-- horizontal lines -->
+    <path d="M48 96 H464 M48 160 H464 M48 224 H464 M48 288 H464 M48 352 H464 M48 416 H464"
+          stroke="#FFFFFF" stroke-width="2"/>
+  </g>
+
+  <!-- Finder patterns (top-left and top-right small accent) -->
+  <g transform="translate(72,72)" filter="url(#softShadow)">
+    <use href="#finder"/>
+  </g>
+
+  <g transform="translate(344,72) scale(0.65)" opacity="0.95" filter="url(#softShadow)">
+    <use href="#finder"/>
+  </g>
+
+  <!-- Central stylized QR area -->
+  <g transform="translate(156,180)">
+    <!-- 7x7 grid of modules with some pattern -->
+    <!-- Row 1 -->
+    <use href="#qrModule" x="0"   y="0"/>
+    <use href="#qrModule" x="24"  y="0"/>
+    <use href="#qrModule" x="48"  y="0"/>
+    <use href="#qrModule" x="120" y="0"/>
+    <use href="#qrModule" x="168" y="0"/>
+    <!-- Row 2 -->
+    <use href="#qrModule" x="0"   y="24"/>
+    <use href="#qrModule" x="48"  y="24"/>
+    <use href="#qrModule" x="72"  y="24"/>
+    <use href="#qrModule" x="144" y="24"/>
+    <use href="#qrModule" x="168" y="24"/>
+    <!-- Row 3 -->
+    <use href="#qrModule" x="0"   y="48"/>
+    <use href="#qrModule" x="24"  y="48"/>
+    <use href="#qrModule" x="72"  y="48"/>
+    <use href="#qrModule" x="120" y="48"/>
+    <use href="#qrModule" x="144" y="48"/>
+    <!-- Row 4 -->
+    <use href="#qrModule" x="24"  y="72"/>
+    <use href="#qrModule" x="72"  y="72"/>
+    <use href="#qrModule" x="96"  y="72"/>
+    <use href="#qrModule" x="144" y="72"/>
+    <!-- Row 5 -->
+    <use href="#qrModule" x="0"   y="96"/>
+    <use href="#qrModule" x="24"  y="96"/>
+    <use href="#qrModule" x="72"  y="96"/>
+    <use href="#qrModule" x="96"  y="96"/>
+    <use href="#qrModule" x="144" y="96"/>
+    <use href="#qrModule" x="168" y="96"/>
+  </g>
+
+  <!-- Barcode motif (bottom-right) -->
+  <g transform="translate(304,352)">
+    <rect x="0"   y="0" width="6"  height="80" rx="3" fill="#FFFFFF" opacity="0.95"/>
+    <rect x="12"  y="8" width="3"  height="72" rx="1.5" fill="#FFFFFF" opacity="0.8"/>
+    <rect x="20"  y="0" width="10" height="80" rx="3" fill="#FFFFFF" opacity="0.95"/>
+    <rect x="34"  y="12" width="4" height="68" rx="2" fill="#FFFFFF" opacity="0.85"/>
+    <rect x="42"  y="0" width="7"  height="80" rx="3" fill="#FFFFFF" opacity="0.95"/>
+    <rect x="53"  y="6" width="3"  height="74" rx="1.5" fill="#FFFFFF" opacity="0.8"/>
+    <rect x="60"  y="0" width="12" height="80" rx="3" fill="#FFFFFF" opacity="0.95"/>
+  </g>
+
+  <!-- App initials badge (optional subtle label) -->
+  <g transform="translate(72,384)" opacity="0.9">
+    <rect x="0" y="0" width="88" height="40" rx="20" fill="#004D40" opacity="0.25"/>
+    <text x="44" y="27" text-anchor="middle" font-family="Segoe UI, Roboto, Arial" font-size="18" fill="#FFFFFF">
+      QR+
+    </text>
+  </g>
+</svg>
