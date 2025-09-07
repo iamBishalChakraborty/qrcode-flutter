@@ -39,7 +39,7 @@
 
   <!-- Right: Title and description -->
   <g transform="translate(420, 96)" fill="#FFFFFF" font-family="Segoe UI, Roboto, Arial, sans-serif">
-    <text x="0" y="0" font-size="54" font-weight="700">QR &amp; Barcode Toolkit</text>
+    <text x="0" y="0" font-size="54" font-weight="700">Quick QR &amp; Barcode Toolkit</text>
     <text x="0" y="56" font-size="22" opacity="0.95">Scan, generate, and share codes — fast and reliable</text>
 
     <!-- Bulleted value props -->
